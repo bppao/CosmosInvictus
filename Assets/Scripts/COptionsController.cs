@@ -28,7 +28,10 @@ public class COptionsController : MonoBehaviour
 
     private void Update()
     {
-        m_MusicManager.SetVolume(VolumeSlider.value);
+        if (m_MusicManager)
+        {
+            m_MusicManager.SetVolume(VolumeSlider.value);
+        }
     }
 
     public void SaveAndExit()
